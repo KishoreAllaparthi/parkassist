@@ -1,0 +1,34 @@
+<form id="form">
+  <label for="customer">Select customer:</label><br>
+  <select id="customer">
+    <option value="customer1">Customer 1</option>
+    <option value="customer2">Customer 2</option>
+    <option value="customer3">Customer 3</option>
+  </select><br>
+  <button type="button" onclick="selectSlot()">Select parking slot</button>
+  <br><br>
+  <span id="result"></span>
+</form>
+
+<script>
+  function selectSlot() {
+    // Get the selected customer name
+    var customer = document.getElementById("customer").value;
+
+    // Array of available parking slots
+    var slots = ["A1", "B2", "C3", "D4"];
+
+    // Select a random parking slot
+    var slot = slots[Math.floor(Math.random() * slots.length)];
+
+    // Display the customer name and parking slot in the UI
+    document.getElementById("result").innerHTML = "Customer: " + customer + "<br>Slot: " + slot;
+
+    // Save the customer name and parking slot to the database
+    saveToDatabase(customer, slot);
+
+    // Disable the dropdown and button to prevent further selections
+    document.getElementById("customer").disabled = true;
+    document.getElementById("form").elements[1].disabled = true;
+  }
+</script>

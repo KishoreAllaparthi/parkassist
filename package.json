@@ -1,0 +1,15 @@
+{
+  "name": "org.parkassist",
+  "version": "1.0.0",
+  "description": "Parkassist is to assist user to allocate a random parking slot to user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kishore Kumar Allaparthi (allaparthi.kishore@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0"
+  }
+}
